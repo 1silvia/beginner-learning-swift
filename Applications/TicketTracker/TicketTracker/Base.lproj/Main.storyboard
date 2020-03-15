@@ -16,22 +16,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="p3B-b6-Qgo">
-                                <rect key="frame" x="87" y="369" width="240" height="168"/>
+                                <rect key="frame" x="87" y="321.5" width="240" height="263"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LnV-A5-hsw">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="68"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzh-19-vAj">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOT-Sh-oJa">
+                                                <rect key="frame" x="0.0" y="34" width="240" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="twe-jS-JXI">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
+                                        <rect key="frame" x="0.0" y="95" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drg-WO-4JF">
-                                        <rect key="frame" x="0.0" y="61" width="240" height="30"/>
+                                        <rect key="frame" x="0.0" y="156" width="240" height="30"/>
                                         <state key="normal" title="Calculate"/>
                                         <connections>
                                             <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oF6-9t-ehX"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKW-zt-UXB">
-                                        <rect key="frame" x="0.0" y="118" width="240" height="50"/>
+                                        <rect key="frame" x="0.0" y="213" width="240" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,6 +63,8 @@
                     </view>
                     <connections>
                         <outlet property="inputTextField" destination="twe-jS-JXI" id="mgK-mT-Ibf"/>
+                        <outlet property="number1Field" destination="Gzh-19-vAj" id="76Y-rP-cEB"/>
+                        <outlet property="number2Field" destination="gOT-Sh-oJa" id="q8e-pv-kmB"/>
                         <outlet property="resultLabel" destination="xKW-zt-UXB" id="DK9-Ah-ucV"/>
                     </connections>
                 </viewController>
