@@ -10,13 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var number1Field: UITextField!
-     @IBOutlet weak var number2Field: UITextField!
-    
-    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var number2Field: UITextField!
     
     @IBOutlet weak var resultLabel: UILabel!
     
-    @IBAction func calculateTapped(_ sender: Any) {
+    @IBAction func plusTapped(_ sender: Any) {
+        calculateOperation(input: "+")
+    }
+    
+    @IBAction func minusTapped(_ sender: Any) {
+        calculateOperation(input: "-")
+    }
+    
+    @IBAction func multiplyTapped(_ sender: Any) {
+        calculateOperation(input: "*")
+    }
+    
+    @IBAction func divisionTapped(_ sender: Any) {
+       calculateOperation(input: "/")
+    }
+    
+    func calculateOperation(input: String) {
         guard let number1Text = number1Field.text,
             let number1 = Int(number1Text) else {
                 print("number1 input or not an integer")
@@ -29,47 +43,7 @@ class ViewController: UIViewController {
                 return
         }
         
-        // calculate(inputInteger: inputInteger)
-        // calculateReceipes()
-        
-        //calculateArithmentic(input: inputTextField.text!)
-        
-        calculateArithmenticUsingSwitch(input: inputTextField.text!, number1: number1, number2: number2)
-    }
-    
-    func calculate(inputInteger: Int) {
-        var result = 0
-        if inputInteger < 10 {
-           result = inputInteger * 2
-        } else {
-            result = inputInteger * 5
-        }
-        
-        resultLabel.text = "\(result)"
-    }
-    
-    func calculateArithmentic(input: String) {
-        var result = 0
-        let number1 = 100
-        let number2 = 10
-        
-        if input == "+" {
-            result = number1 + number2
-        }
-        else if input == "-" {
-            result = number1 - number2
-        }
-        else if input == "*" {
-            result = number1 * number2
-        }
-        else if input == "/" {
-            result = number1 / number2
-        }
-        else {
-            print("input is not correct")
-        }
-        
-        resultLabel.text = "\(result)"
+        calculateArithmenticUsingSwitch(input: input, number1: number1, number2: number2)
     }
     
     func calculateArithmenticUsingSwitch(input: String, number1: Int, number2: Int) {
@@ -87,20 +61,7 @@ class ViewController: UIViewController {
         default:
             print("input is not correct")
         }
-
+        
         resultLabel.text = "\(result)"
     }
-    
-    func calculateReceipes() {
-        let receipts = ["food1",
-                        "food2",
-                        "food3",
-                        "food4",
-                        "food5"]
-        let randomIndex = Int.random(in: 0...receipts.count - 1)
-        let randomReceipt = receipts[randomIndex]
-        
-        resultLabel.text = "\(randomReceipt)"
-    }
 }
-
