@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="avF-WB-ltk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -124,6 +124,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="132.58928571428572"/>
+        </scene>
+        <!--Arithmetic Operations View Controler-->
+        <scene sceneID="YcJ-Ea-5QG">
+            <objects>
+                <viewController id="avF-WB-ltk" customClass="ArithmeticOperationsViewControler" customModule="TicketTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="joB-4s-JY5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hVs-2R-qjX">
+                                <rect key="frame" x="152" y="348" width="60" height="144"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JvJ-23-cE1">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdY-QE-smZ" userLabel="saluteTapped">
+                                        <rect key="frame" x="0.0" y="34" width="60" height="30"/>
+                                        <state key="normal" title="say hi"/>
+                                        <connections>
+                                            <action selector="saluteTapped:" destination="avF-WB-ltk" eventType="touchUpInside" id="gO7-7d-dUe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMM-BH-QGe">
+                                        <rect key="frame" x="0.0" y="64" width="60" height="30"/>
+                                        <state key="normal" title="say hello"/>
+                                        <connections>
+                                            <action selector="helloTapped:" destination="avF-WB-ltk" eventType="touchUpInside" id="Mc1-ly-rKJ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-Ay-cUv">
+                                        <rect key="frame" x="0.0" y="94" width="60" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hVs-2R-qjX" firstAttribute="centerX" secondItem="5bv-7c-yFi" secondAttribute="centerX" id="PdL-Co-rp6"/>
+                            <constraint firstItem="hVs-2R-qjX" firstAttribute="centerY" secondItem="5bv-7c-yFi" secondAttribute="centerY" id="hQq-mB-1Tn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5bv-7c-yFi"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="JvJ-23-cE1" id="CdH-mQ-Jo1"/>
+                        <outlet property="saluteLabel" destination="MUb-Ay-cUv" id="51s-ls-kjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Lg-UB-EUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="133"/>
         </scene>
     </scenes>
 </document>

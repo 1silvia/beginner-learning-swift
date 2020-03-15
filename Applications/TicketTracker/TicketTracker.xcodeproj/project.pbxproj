@@ -15,6 +15,7 @@
 		2C813F13238B264A001144FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C813F11238B264A001144FF /* LaunchScreen.storyboard */; };
 		2C813F1E238B264A001144FF /* TicketTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C813F1D238B264A001144FF /* TicketTrackerTests.swift */; };
 		2C813F29238B264A001144FF /* TicketTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C813F28238B264A001144FF /* TicketTrackerUITests.swift */; };
+		2CAD427D241EA309002ABE3C /* ArithmeticOperationsViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD427C241EA309002ABE3C /* ArithmeticOperationsViewControler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2C813F24238B264A001144FF /* TicketTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C813F28238B264A001144FF /* TicketTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTrackerUITests.swift; sourceTree = "<group>"; };
 		2C813F2A238B264A001144FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CAD427C241EA309002ABE3C /* ArithmeticOperationsViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticOperationsViewControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				2C813F06238B2647001144FF /* AppDelegate.swift */,
 				2C813F08238B2647001144FF /* SceneDelegate.swift */,
 				2C813F0A238B2647001144FF /* ViewController.swift */,
+				2CAD427C241EA309002ABE3C /* ArithmeticOperationsViewControler.swift */,
 				2C813F0C238B2647001144FF /* Main.storyboard */,
 				2C813F0F238B264A001144FF /* Assets.xcassets */,
 				2C813F11238B264A001144FF /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				2C813F0B238B2647001144FF /* ViewController.swift in Sources */,
 				2C813F07238B2647001144FF /* AppDelegate.swift in Sources */,
 				2C813F09238B2647001144FF /* SceneDelegate.swift in Sources */,
+				2CAD427D241EA309002ABE3C /* ArithmeticOperationsViewControler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
