@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ArithmeticOperationsViewControler: UIViewController {
+public class ArithmeticOperationsViewControler: UIViewController {
 
 //           guard let number1Text = number1Field.text,
 //               let number1 = Int(number1Text) else {
@@ -22,25 +22,21 @@ class ArithmeticOperationsViewControler: UIViewController {
 //                   print("number2 input or not an integer")
 //                   return
 //           }
-    
-    
    
     @IBAction func helloTapped(_ sender: Any) {
-        say(greeting: "Hello", name: nameTextField.text!)
+        saluteLabel.text = say(greeting: "Hello", name: nameTextField.text!)
     }
     
     @IBAction func saluteTapped(_ sender: Any) {
-        say(greeting: "Hi", name: nameTextField.text!)
+        saluteLabel.text = say(greeting: "Hi", name: nameTextField.text!)
     }
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saluteLabel: UILabel!
     
-    func say(greeting: String, name: String) {
+    public func say(greeting: String, name: String) -> String {
         
-        saluteLabel.text = greeting + " " + name
+         return greeting + " " + name
     }
     
 }
-
-

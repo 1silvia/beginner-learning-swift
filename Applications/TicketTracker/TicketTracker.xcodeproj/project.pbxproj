@@ -13,8 +13,8 @@
 		2C813F0E238B2647001144FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C813F0C238B2647001144FF /* Main.storyboard */; };
 		2C813F10238B264A001144FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C813F0F238B264A001144FF /* Assets.xcassets */; };
 		2C813F13238B264A001144FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C813F11238B264A001144FF /* LaunchScreen.storyboard */; };
-		2C813F1E238B264A001144FF /* TicketTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C813F1D238B264A001144FF /* TicketTrackerTests.swift */; };
-		2C813F29238B264A001144FF /* TicketTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C813F28238B264A001144FF /* TicketTrackerUITests.swift */; };
+		2CA293BA2423E75500C4057E /* ArithmeticOperationsViewControlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA293B72423E5BA00C4057E /* ArithmeticOperationsViewControlerTests.swift */; };
+		2CA293BC2423E8CF00C4057E /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA293BB2423E8CF00C4057E /* ViewControllerTests.swift */; };
 		2CAD427D241EA309002ABE3C /* ArithmeticOperationsViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD427C241EA309002ABE3C /* ArithmeticOperationsViewControler.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,11 +45,10 @@
 		2C813F12238B264A001144FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C813F14238B264A001144FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C813F19238B264A001144FF /* TicketTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C813F1D238B264A001144FF /* TicketTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTrackerTests.swift; sourceTree = "<group>"; };
 		2C813F1F238B264A001144FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C813F24238B264A001144FF /* TicketTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C813F28238B264A001144FF /* TicketTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTrackerUITests.swift; sourceTree = "<group>"; };
-		2C813F2A238B264A001144FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA293B72423E5BA00C4057E /* ArithmeticOperationsViewControlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticOperationsViewControlerTests.swift; sourceTree = "<group>"; };
+		2CA293BB2423E8CF00C4057E /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		2CAD427C241EA309002ABE3C /* ArithmeticOperationsViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticOperationsViewControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +82,6 @@
 			children = (
 				2C813F05238B2647001144FF /* TicketTracker */,
 				2C813F1C238B264A001144FF /* TicketTrackerTests */,
-				2C813F27238B264A001144FF /* TicketTrackerUITests */,
 				2C813F04238B2647001144FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,19 +114,11 @@
 		2C813F1C238B264A001144FF /* TicketTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				2C813F1D238B264A001144FF /* TicketTrackerTests.swift */,
+				2CA293BB2423E8CF00C4057E /* ViewControllerTests.swift */,
+				2CA293B72423E5BA00C4057E /* ArithmeticOperationsViewControlerTests.swift */,
 				2C813F1F238B264A001144FF /* Info.plist */,
 			);
 			path = TicketTrackerTests;
-			sourceTree = "<group>";
-		};
-		2C813F27238B264A001144FF /* TicketTrackerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2C813F28238B264A001144FF /* TicketTrackerUITests.swift */,
-				2C813F2A238B264A001144FF /* Info.plist */,
-			);
-			path = TicketTrackerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C813F1E238B264A001144FF /* TicketTrackerTests.swift in Sources */,
+				2CA293BC2423E8CF00C4057E /* ViewControllerTests.swift in Sources */,
+				2CA293BA2423E75500C4057E /* ArithmeticOperationsViewControlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +272,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C813F29238B264A001144FF /* TicketTrackerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

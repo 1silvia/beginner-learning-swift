@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public class ViewController: UIViewController {
     @IBOutlet weak var number1Field: UITextField!
     @IBOutlet weak var number2Field: UITextField!
     
@@ -43,10 +43,10 @@ class ViewController: UIViewController {
                 return
         }
         
-        calculateArithmenticUsingSwitch(input: input, number1: number1, number2: number2)
+        resultLabel.text = calculateArithmenticUsingSwitch(input: input, number1: number1, number2: number2)
     }
     
-    func calculateArithmenticUsingSwitch(input: String, number1: Int, number2: Int) {
+    public func calculateArithmenticUsingSwitch(input: String, number1: Int, number2: Int) -> String? {
         var result = 0
         
         switch input {
@@ -57,11 +57,14 @@ class ViewController: UIViewController {
         case "*":
             result = number1 * number2
         case "/":
+            if number2 == 0 {
+                return nil
+            }
             result = number1 / number2
         default:
-            print("input is not correct")
+            return nil
         }
         
-        resultLabel.text = "\(result)"
+        return "\(result)"
     }
 }
