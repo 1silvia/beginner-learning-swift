@@ -164,10 +164,21 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Lm-zt-cfs" userLabel="numbersPlaceHolder">
-                                <rect key="frame" x="79" y="276" width="256" height="344"/>
+                                <rect key="frame" x="79" y="247" width="256" height="402"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="85Y-Fy-7qw">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqR-Sh-nLx">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ase-LJ-4v3" userLabel="firstRow">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="80"/>
+                                        <rect key="frame" x="0.0" y="58" width="256" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7W-Pk-7aG">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -184,6 +195,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberSeven:" destination="avF-WB-ltk" eventType="touchUpInside" id="qQ3-Sq-qod"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNj-G1-ofO">
                                                 <rect key="frame" x="88" y="0.0" width="80" height="80"/>
@@ -200,6 +214,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberEight:" destination="avF-WB-ltk" eventType="touchUpInside" id="pfb-2f-RyF"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzh-NM-nV5">
                                                 <rect key="frame" x="176" y="0.0" width="80" height="80"/>
@@ -216,11 +233,14 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberNine:" destination="avF-WB-ltk" eventType="touchUpInside" id="YXW-CA-eml"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8oE-dY-hWq">
-                                        <rect key="frame" x="0.0" y="88" width="256" height="80"/>
+                                        <rect key="frame" x="0.0" y="146" width="256" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVH-cU-YWM">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -237,6 +257,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nuberFour:" destination="avF-WB-ltk" eventType="touchUpInside" id="6Nv-Ol-uu9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thb-36-D3b">
                                                 <rect key="frame" x="88" y="0.0" width="80" height="80"/>
@@ -253,6 +276,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberFive:" destination="avF-WB-ltk" eventType="touchUpInside" id="FVm-nQ-pei"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRx-Vm-ctR">
                                                 <rect key="frame" x="176" y="0.0" width="80" height="80"/>
@@ -269,11 +295,14 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberSix:" destination="avF-WB-ltk" eventType="touchUpInside" id="PQj-Me-Tk9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rhB-mg-Z7O">
-                                        <rect key="frame" x="0.0" y="176" width="256" height="80"/>
+                                        <rect key="frame" x="0.0" y="234" width="256" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wX-C5-0Uc">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -290,6 +319,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberOne:" destination="avF-WB-ltk" eventType="touchUpInside" id="J7w-ci-0hw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAH-ti-qB4">
                                                 <rect key="frame" x="88" y="0.0" width="80" height="80"/>
@@ -306,6 +338,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTwo:" destination="avF-WB-ltk" eventType="touchUpInside" id="qig-wf-yIh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1z-gr-9wW">
                                                 <rect key="frame" x="176" y="0.0" width="80" height="80"/>
@@ -322,11 +357,14 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberThree:" destination="avF-WB-ltk" eventType="touchUpInside" id="x3x-Ux-gIa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ONV-dI-lP7">
-                                        <rect key="frame" x="0.0" y="264" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="322" width="124" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7w-c4-iBP">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -343,6 +381,16 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberZero:" destination="avF-WB-ltk" eventType="touchUpInside" id="PZR-sz-VaR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXf-LA-mkb">
+                                                <rect key="frame" x="88" y="0.0" width="36" height="80"/>
+                                                <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="clearTapped:" destination="avF-WB-ltk" eventType="touchUpInside" id="c82-8y-Dsa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -358,6 +406,7 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="JvJ-23-cE1" id="CdH-mQ-Jo1"/>
+                        <outlet property="numberPanel" destination="FqR-Sh-nLx" id="Zqs-Sf-X8m"/>
                         <outlet property="saluteLabel" destination="MUb-Ay-cUv" id="51s-ls-kjy"/>
                     </connections>
                 </viewController>

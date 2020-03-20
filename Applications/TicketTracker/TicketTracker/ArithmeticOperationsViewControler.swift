@@ -11,18 +11,22 @@ import UIKit
 
 public class ArithmeticOperationsViewControler: UIViewController {
 
-//           guard let number1Text = number1Field.text,
-//               let number1 = Int(number1Text) else {
-//                   print("number1 input or not an integer")
-//                   return
-//           }
-//
-//           guard let number2Text = number2Field.text,
-//               let number2 = Int(number2Text) else {
-//                   print("number2 input or not an integer")
-//                   return
-//           }
-   
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var saluteLabel: UILabel!
+    
+    @IBOutlet weak var numberPanel: UILabel!
+    
+    public var textFieldValue: String = "" {
+        didSet {
+            numberPanel?.text = textFieldValue
+        }
+    }
+    
+     public func addDigit(digit: String) {
+         textFieldValue = textFieldValue + digit
+     }
+    
     @IBAction func helloTapped(_ sender: Any) {
         saluteLabel.text = say(greeting: "Hello", name: nameTextField.text!)
     }
@@ -31,12 +35,51 @@ public class ArithmeticOperationsViewControler: UIViewController {
         saluteLabel.text = say(greeting: "Hi", name: nameTextField.text!)
     }
     
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var saluteLabel: UILabel!
-    
     public func say(greeting: String, name: String) -> String {
-        
          return greeting + " " + name
     }
     
+    @IBAction func numberSeven(_ sender: Any) {
+        addDigit(digit: "7")
+    }
+    
+    @IBAction func numberEight(_ sender: Any) {
+        addDigit(digit: "8")
+    }
+    
+    @IBAction func numberNine(_ sender: Any) {
+        addDigit(digit: "9")
+    }
+    
+    @IBAction func nuberFour(_ sender: Any) {
+        addDigit(digit: "4")
+    }
+    
+    @IBAction func numberFive(_ sender: Any) {
+        addDigit(digit: "5")
+    }
+    
+    @IBAction func numberSix(_ sender: Any) {
+        addDigit(digit: "6")
+    }
+    
+    @IBAction func numberOne(_ sender: Any) {
+        addDigit(digit: "1")
+    }
+    
+    @IBAction func numberTwo(_ sender: Any) {
+        addDigit(digit: "2")
+    }
+    
+    @IBAction func numberThree(_ sender: Any) {
+        addDigit(digit: "3")
+    }
+    
+    @IBAction func clearTapped(_ sender: Any) {
+        textFieldValue = ""
+    }
+    
+    @IBAction func numberZero(_ sender: Any) {
+        addDigit(digit: "0")
+    }
 }
