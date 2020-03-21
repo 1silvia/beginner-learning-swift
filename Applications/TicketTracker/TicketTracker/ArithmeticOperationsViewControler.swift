@@ -11,6 +11,7 @@ import UIKit
 
 public class ArithmeticOperationsViewControler: UIViewController {
     
+    @IBOutlet weak var numbersContainer: UIView!
     @IBOutlet weak var numberPanel: UILabel!
     
     public var textFieldValue: String = "" {
@@ -18,12 +19,33 @@ public class ArithmeticOperationsViewControler: UIViewController {
             numberPanel?.text = textFieldValue
         }
     }
-
-     public func addDigit(digit: String) {
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipe))
+        swipeGestureRecognizer.direction = .left
+        
+        numbersContainer.addGestureRecognizer(swipeGestureRecognizer)
+    }
+    
+    @objc func swipe(gestureRecognizer: UISwipeGestureRecognizer) {
+        deleteLast()
+    }
+    
+    @IBAction func deleteLastDigit(_ sender: Any) {
+        deleteLast()
+    }
+    
+    public func addDigit(digit: String) {
         if textFieldValue.count + digit.count <= 8 {
             textFieldValue = textFieldValue + digit
         }
-     }
+    }
+    
+    public func deleteLast() {
+        textFieldValue = String(textFieldValue.dropLast())
+    }
     
     @IBAction func numberSeven(_ sender: Any) {
         addDigit(digit: "7")

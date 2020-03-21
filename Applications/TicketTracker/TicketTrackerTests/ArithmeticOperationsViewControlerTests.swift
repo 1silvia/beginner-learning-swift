@@ -51,4 +51,13 @@ class ArithmeticOperationsViewControlerTests: XCTestCase {
         
         XCTAssertEqual("", controller.textFieldValue)
     }
+    
+    func testBackspace_whenTappingBackspace_shouldDeleteLastDigit() {
+        let controller = ArithmeticOperationsViewControler()
+        controller.addDigit(digit: "8")
+        controller.addDigit(digit: "7")
+        controller.deleteLast()
+        
+        XCTAssertEqual("8", controller.textFieldValue)
+    }
 }
