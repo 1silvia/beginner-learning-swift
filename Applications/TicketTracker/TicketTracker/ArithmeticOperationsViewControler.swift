@@ -18,9 +18,11 @@ public class ArithmeticOperationsViewControler: UIViewController {
             numberPanel?.text = textFieldValue
         }
     }
-    
+
      public func addDigit(digit: String) {
-         textFieldValue = textFieldValue + digit
+        if textFieldValue.count + digit.count <= 8 {
+            textFieldValue = textFieldValue + digit
+        }
      }
     
     @IBAction func numberSeven(_ sender: Any) {

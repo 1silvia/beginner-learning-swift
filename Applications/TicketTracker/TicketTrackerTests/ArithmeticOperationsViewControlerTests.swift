@@ -11,13 +11,6 @@ import TicketTracker
 
 class ArithmeticOperationsViewControlerTests: XCTestCase {
 
-    func testGreeting() {
-        let controller = ArithmeticOperationsViewControler()
-        let result = controller.say(greeting: "nighty night", name: "John")
-        
-        XCTAssertEqual("nighty night John", result)
-    }
-    
     func testNumber7_whenTappingButton7_shouldTextAreaBe7() {
         let controller = ArithmeticOperationsViewControler()
         controller.addDigit(digit: "7")
@@ -39,5 +32,23 @@ class ArithmeticOperationsViewControlerTests: XCTestCase {
 
         
         XCTAssertEqual("87", controller.textFieldValue)
+    }
+    
+    func testNumberLimit8_whenTapping9Digits_shouldStopAdding() {
+        let controller = ArithmeticOperationsViewControler()
+        
+        for character in "123456789" {
+            controller.addDigit(digit: "\(character)")
+        }
+        
+        XCTAssertEqual("12345678", controller.textFieldValue)
+    }
+    
+    func testNumberLimit8_whenAdding9DigitsAtOnce_shouldOnlyAdd8() {
+        let controller = ArithmeticOperationsViewControler()
+        
+        controller.addDigit(digit: "123456789")
+        
+        XCTAssertEqual("", controller.textFieldValue)
     }
 }
