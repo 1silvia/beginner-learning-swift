@@ -10,10 +10,6 @@ import Foundation
 import UIKit
 
 public class ArithmeticOperationsViewControler: UIViewController {
-
-    @IBOutlet weak var nameTextField: UITextField!
-    
-    @IBOutlet weak var saluteLabel: UILabel!
     
     @IBOutlet weak var numberPanel: UILabel!
     
@@ -26,18 +22,6 @@ public class ArithmeticOperationsViewControler: UIViewController {
      public func addDigit(digit: String) {
          textFieldValue = textFieldValue + digit
      }
-    
-    @IBAction func helloTapped(_ sender: Any) {
-        saluteLabel.text = say(greeting: "Hello", name: nameTextField.text!)
-    }
-    
-    @IBAction func saluteTapped(_ sender: Any) {
-        saluteLabel.text = say(greeting: "Hi", name: nameTextField.text!)
-    }
-    
-    public func say(greeting: String, name: String) -> String {
-         return greeting + " " + name
-    }
     
     @IBAction func numberSeven(_ sender: Any) {
         addDigit(digit: "7")
