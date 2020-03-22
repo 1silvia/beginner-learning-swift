@@ -134,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Lm-zt-cfs" userLabel="numbersPlaceHolder">
-                                <rect key="frame" x="79" y="183" width="256" height="530"/>
+                                <rect key="frame" x="79" y="139" width="256" height="618"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rla-K8-Esr">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="90"/>
@@ -396,6 +396,36 @@
                                             <action selector="deleteLastDigit:" destination="avF-WB-ltk" eventType="touchUpInside" id="Y7q-1F-IJc"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rc4-Rr-A8R">
+                                        <rect key="frame" x="0.0" y="538" width="256" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcM-zU-6Zg">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="7Dt-og-tCZ"/>
+                                                    <constraint firstAttribute="width" constant="80" id="xkg-x5-v15"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="x^2"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="returnSquare:" destination="avF-WB-ltk" eventType="touchUpInside" id="b01-K7-YlZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="QcM-zU-6Zg" secondAttribute="bottom" id="1tl-X8-lBZ"/>
+                                            <constraint firstItem="QcM-zU-6Zg" firstAttribute="top" secondItem="Rc4-Rr-A8R" secondAttribute="top" id="ZlG-2e-u0b"/>
+                                            <constraint firstItem="QcM-zU-6Zg" firstAttribute="leading" secondItem="Rc4-Rr-A8R" secondAttribute="leading" id="lye-oy-k6n"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>

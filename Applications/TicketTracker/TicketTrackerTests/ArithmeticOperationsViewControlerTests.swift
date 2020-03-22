@@ -60,4 +60,12 @@ class ArithmeticOperationsViewControlerTests: XCTestCase {
         
         XCTAssertEqual("8", controller.textFieldValue)
     }
+    
+    func testCalculateSquare_whenTappingSquareButton_shouldReturnSquareOfNumber() {
+        let controller = ArithmeticOperationsViewControler()
+        controller.addDigit(digit: "5")
+        controller.calculateSquare()
+        
+        XCTAssertEqual("25", controller.textFieldValue)
+    }
 }

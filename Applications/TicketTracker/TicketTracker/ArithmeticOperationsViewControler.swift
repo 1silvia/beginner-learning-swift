@@ -33,6 +33,10 @@ public class ArithmeticOperationsViewControler: UIViewController {
         deleteLast()
     }
     
+    @IBAction func returnSquare(_ sender: Any) {
+        calculateSquare()
+    }
+    
     @IBAction func deleteLastDigit(_ sender: Any) {
         deleteLast()
     }
@@ -44,7 +48,17 @@ public class ArithmeticOperationsViewControler: UIViewController {
     }
     
     public func deleteLast() {
-        textFieldValue = String(textFieldValue.dropLast())
+        textFieldValue = "\(textFieldValue.dropLast())"
+    }
+    
+    public func calculateSquare() {
+        guard let numberInt = Int(textFieldValue) else {
+            print("did not find number in text field")
+            return
+        }
+        
+        let result = pow(Decimal(numberInt), 2)
+        textFieldValue = "\(result)"
     }
     
     @IBAction func numberSeven(_ sender: Any) {
