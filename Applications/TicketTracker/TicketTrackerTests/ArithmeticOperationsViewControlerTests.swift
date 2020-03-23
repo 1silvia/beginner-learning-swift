@@ -68,4 +68,32 @@ class ArithmeticOperationsViewControlerTests: XCTestCase {
         
         XCTAssertEqual("25", controller.textFieldValue)
     }
+    
+    func testAdditionOperation_whenTappingAdditionButton_shouldReturnSumOfNumbers() {
+        let controller = ArithmeticOperationsViewControler()
+        controller.addDigit(digit: "5")
+        controller.addOperationPlus()
+        controller.addDigit(digit: "7")
+        controller.addEqual()
+        
+        XCTAssertEqual("12", controller.textFieldValue)
+    }
+    
+    func testAdditionOperation_whenTappingPlus_shouldSaveNumber1InTextField() {
+        let controller = ArithmeticOperationsViewControler()
+        controller.addDigit(digit: "5")
+        controller.addOperationPlus()
+        
+        XCTAssertEqual(5, controller.number1)
+    }
+    
+    func testAdditionOperation_whenTappingEqualButton_shouldSaveNumber2InTextField() {
+        let controller = ArithmeticOperationsViewControler()
+        controller.addDigit(digit: "5")
+        controller.addOperationPlus()
+        controller.addDigit(digit: "7")
+        controller.addEqual()
+        
+        XCTAssertEqual(7, controller.number2)
+    }
 }

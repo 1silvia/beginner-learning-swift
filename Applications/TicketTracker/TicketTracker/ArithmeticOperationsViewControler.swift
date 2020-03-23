@@ -14,6 +14,9 @@ public class ArithmeticOperationsViewControler: UIViewController {
     @IBOutlet weak var numbersContainer: UIView!
     @IBOutlet weak var numberPanel: UILabel!
     
+    public var number1: Int = 0
+    public var number2: Int = 0
+    
     public var textFieldValue: String = "" {
         didSet {
             numberPanel?.text = textFieldValue
@@ -41,12 +44,31 @@ public class ArithmeticOperationsViewControler: UIViewController {
         deleteLast()
     }
     
+    @IBAction func additionOperation(_ sender: Any) {
+        addOperationPlus()
+    }
+    
+    @IBAction func equalOperation(_ sender: Any) {
+        addEqual()
+    }
+    
     public func addDigit(digit: String) {
         if textFieldValue.count + digit.count <= 8 {
             textFieldValue = textFieldValue + digit
         }
     }
     
+    public func addOperationPlus() {
+        number1 = Int(textFieldValue)!
+        clearTextFieldValue()
+    }
+    
+    public func addEqual() {
+        number2 = Int(textFieldValue)!
+        let result = number1 + number2
+        textFieldValue = "\(result)"
+    }
+
     public func deleteLast() {
         textFieldValue = "\(textFieldValue.dropLast())"
     }
@@ -97,8 +119,12 @@ public class ArithmeticOperationsViewControler: UIViewController {
         addDigit(digit: "3")
     }
     
-    @IBAction func clearTapped(_ sender: Any) {
+    fileprivate func clearTextFieldValue() {
         textFieldValue = ""
+    }
+    
+    @IBAction func clearTapped(_ sender: Any) {
+        clearTextFieldValue()
     }
     
     @IBAction func numberZero(_ sender: Any) {
