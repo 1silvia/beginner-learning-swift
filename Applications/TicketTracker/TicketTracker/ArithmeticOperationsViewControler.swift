@@ -16,6 +16,7 @@ public class ArithmeticOperationsViewControler: UIViewController {
     
     public var number1: Int = 0
     public var number2: Int = 0
+    public let operation = ""
     
     public var textFieldValue: String = "" {
         didSet {
@@ -45,7 +46,11 @@ public class ArithmeticOperationsViewControler: UIViewController {
     }
     
     @IBAction func additionOperation(_ sender: Any) {
-        addOperationPlus()
+        addOperationPlus(operation: "+")
+    }
+    
+    @IBAction func subtractionOperation(_ sender: Any) {
+        addOperationMinus(operation: "-")
     }
     
     @IBAction func equalOperation(_ sender: Any) {
@@ -58,15 +63,26 @@ public class ArithmeticOperationsViewControler: UIViewController {
         }
     }
     
-    public func addOperationPlus() {
+    public func addOperationPlus(operation: String) {
         number1 = Int(textFieldValue)!
         clearTextFieldValue()
     }
     
     public func addEqual() {
+        var result: Int = 0 
         number2 = Int(textFieldValue)!
-        let result = number1 + number2
+        if operation == "+" {
+            result = number1 + number2
+        }
+        if operation == "-" {
+            result = number1 - number2
+        }
         textFieldValue = "\(result)"
+    }
+    
+    public func addOperationMinus(operation: String) {
+        number1 = Int(textFieldValue)!
+        clearTextFieldValue()
     }
 
     public func deleteLast() {
