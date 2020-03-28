@@ -72,15 +72,16 @@ class ArithmeticOperationsViewControlerTests: XCTestCase {
     func testAdditionOperation_whenTappingPlus_shouldSaveNumber1InTextField() {
         let controller = ArithmeticOperationsViewControler()
         controller.addDigit(digit: "5")
-        controller.addOperationPlus(operation: "+")
+        controller.performOperation(operationSign: "+")
         
         XCTAssertEqual(5, controller.number1)
+        XCTAssertEqual("+", controller.operation)
     }
     
     func testAdditionOperation_whenTappingEqualButton_shouldSaveNumber2InTextField() {
         let controller = ArithmeticOperationsViewControler()
         controller.addDigit(digit: "5")
-        controller.addOperationPlus(operation: "+")
+        controller.performOperation(operationSign: "+")
         controller.addDigit(digit: "7")
         controller.addEqual()
         
@@ -90,26 +91,26 @@ class ArithmeticOperationsViewControlerTests: XCTestCase {
     func testAdditionOperation_whenTappingAdditionButton_shouldReturnSumOfNumbers() {
         let controller = ArithmeticOperationsViewControler()
         controller.addDigit(digit: "5")
-        controller.addOperationPlus(operation: "+")
+        controller.performOperation(operationSign: "+")
         controller.addDigit(digit: "7")
         controller.addEqual()
         
         XCTAssertEqual("12", controller.textFieldValue)
     }
     
-    
     func testSubtractionOperation_whenTappingMinus_shouldSaveNumber1InTextField() {
         let controller = ArithmeticOperationsViewControler()
         controller.addDigit(digit: "8")
-        controller.addOperationMinus(operation: "-")
+        controller.performOperation(operationSign: "-")
         
         XCTAssertEqual(8, controller.number1)
+        XCTAssertEqual("-", controller.operation)
     }
     
     func testSubtractionOperation_whenTappingEqualButton_shouldSaveNumber2InTextField() {
         let controller = ArithmeticOperationsViewControler()
         controller.addDigit(digit: "8")
-        controller.addOperationMinus(operation: "-")
+        controller.performOperation(operationSign: "-")
         controller.addDigit(digit: "7")
         controller.addEqual()
 
@@ -119,7 +120,7 @@ class ArithmeticOperationsViewControlerTests: XCTestCase {
     func testSubtractionOperation_whenTappingSubtractionButton_shouldReturnSubtractionOfNumbers() {
         let controller = ArithmeticOperationsViewControler()
         controller.addDigit(digit: "8")
-        controller.addOperationMinus(operation: "-")
+        controller.performOperation(operationSign: "-")
         controller.addDigit(digit: "7")
         controller.addEqual()
 
